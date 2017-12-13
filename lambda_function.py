@@ -17,9 +17,9 @@ def lambda_handler(event, context):
 	print "np version=", np.__version__
 	print "context=", context
 	print "event=", event
-	
+
 	bucket = event['Records'][0]['s3']['bucket']['name']
-    key = urllib.unquote_plus(event['Records'][0]['s3']['object']['key'])
+        key = urllib.unquote_plus(event['Records'][0]['s3']['object']['key'])
 	print key
 
 	return "yay, it works!"
